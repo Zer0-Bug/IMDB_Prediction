@@ -248,6 +248,7 @@ The project dependencies are managed via `pip`. It is highly recommended to util
 ```bash
 # Optional: Create and activate virtual environment
 python -m venv venv
+
 source venv/bin/activate  # On Windows use `venv\Scripts\activate`
 ```
 
