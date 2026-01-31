@@ -230,19 +230,41 @@ This section provides the formal academic context for the project.
 
 ---
 <br>
-<h2 align="center">Installation & Usage</h2>
+<h2 align="center">Deployment & Installation</h2>
 
-### Environment Configuration
-The project dependencies are managed via `pip`. It is recommended to utilize a virtual environment:
+### Repository Acquisition
+To initialize a local instance of this repository, execute the following commands in your terminal:
 
 ```bash
-pip install numpy pandas scikit-learn xgboost matplotlib seaborn
+git clone https://github.com/Zer0-Bug/IMDB_Prediction.git
+```
+
+```bash
+cd IMDB_Prediction
+```
+
+### Environment Configuration
+The project dependencies are managed via `pip`. It is highly recommended to utilize a isolated virtual environment to prevent dependency conflicts:
+
+```bash
+# Optional: Create and activate virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+
+# Install core dependencies
+pip install numpy pandas scikit-learn xgboost matplotlib seaborn jupyterlab
 ```
 
 ### Running the Analysis
-1. Navigate to the `Code and Dataset/` directory.
-2. Launch Jupyter Notebook or JupyterLab.
-3. Open `IMDB Movie Ratings Prediction.ipynb` and execute the cells sequentially to reproduce the analysis and model evaluations.
+The primary analytical engine is contained within the Jupyter Notebook. To reproduce the results:
+
+1. Launch JupyterLab:
+   ```bash
+   jupyter lab
+```
+2. Navigate to the `Code and Dataset/` folder via the sidebar.
+3. Open `IMDB Movie Ratings Prediction.ipynb`.
+4. Execute all cells (`Run > Run All Cells`) to observe the EDA and model benchmarking.
 
 ---
 <br>
@@ -275,11 +297,11 @@ All contributions are reviewed before being merged. Please ensure that your chan
 <br>
 <h2 align="center">References</h2>
 
-1. **Sharda & Delen (2006)** - Predicting box-office success with neural networks.
-2. **Choudhury & Gaonkar (2018)** - Machine learning approaches to predicting movie success.
-3. **Breiman (2001)** - Random Forest: An ensemble learning technique.
-4. **Goodfellow et al. (2016)** - Deep Learning, MIT Press.
-5. **Chen & Guestrin (2016)** - XGBoost: A scalable tree boosting system.
+1. **Sharda, R., & Delen, D. (2006)** - [Predicting box-office success with neural networks](https://doi.org/10.1016/j.eswa.2005.07.018). *Expert Systems with Applications*.  
+2. **Choudhury, S., & Gaonkar, S. (2018)** - [Machine learning approaches to predicting movie success](https://ieeexplore.ieee.org/abstract/document/8554471). *IEEE Conference Proceedings*.  
+3. **Breiman, L. (2001)** - [Random Forest: An ensemble learning technique](https://doi.org/10.1023/A:1010933404324). *Machine Learning*.  
+4. **Goodfellow, I., Bengio, Y., & Courville, A. (2016)** - [Deep Learning, MIT Press](https://www.deeplearningbook.org/).  
+5. **Chen, T., & Guestrin, C. (2016)** - [XGBoost: A scalable tree boosting system](https://arxiv.org/abs/1603.02754). *Proceedings of the 22nd ACM SIGKDD*.
 
 ---
 <br>
