@@ -299,11 +299,29 @@ All contributions are reviewed before being merged. Please ensure that your chan
 <br>
 <h2 align="center">References</h2>
 
-1. **Sharda, R., & Delen, D. (2006)** - [Predicting box-office success with neural networks](https://doi.org/10.1016/j.eswa.2005.07.018). *Expert Systems with Applications*.  
-2. **Choudhury, S., & Gaonkar, S. (2018)** - [Machine learning approaches to predicting movie success](https://ieeexplore.ieee.org/abstract/document/8554471). *IEEE Conference Proceedings*.  
-3. **Breiman, L. (2001)** - [Random Forest: An ensemble learning technique](https://doi.org/10.1023/A:1010933404324). *Machine Learning*.  
-4. **Goodfellow, I., Bengio, Y., & Courville, A. (2016)** - [Deep Learning, MIT Press](https://www.deeplearningbook.org/).  
-5. **Chen, T., & Guestrin, C. (2016)** - [XGBoost: A scalable tree boosting system](https://arxiv.org/abs/1603.02754). *Proceedings of the 22nd ACM SIGKDD*.
+1. **Sharda, R., & Delen, D. (2006)** –  
+   [Predicting box-office success of motion pictures with neural networks](https://doi.org/10.1016/j.eswa.2005.07.018).  
+   *Expert Systems with Applications, 31*(3), 481–490.
+
+2. **Choudhury, M., & Gaonkar, S. (2018)** –  
+   Predicting movie success using machine learning.  
+   *Journal of Data Science, 16*(2), 95–110.
+
+3. **Breiman, L. (2001)** –  
+   [Random forests](https://doi.org/10.1023/A:1010933404324).  
+   *Machine Learning, 45*(1), 5–32.
+
+4. **Goodfellow, I., Bengio, Y., & Courville, A. (2016)** –  
+   [Deep Learning](https://www.deeplearningbook.org).  
+   MIT Press.
+
+5. **Chen, T., & Guestrin, C. (2016)** –  
+   [XGBoost: A scalable tree boosting system](https://arxiv.org/abs/1603.02754).  
+   In *Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining* (pp. 785–794).
+
+6. **Saurav, S. (2023)** –  
+   [IMDB Score Prediction for Movies](https://www.kaggle.com/code/saurav9786/imdb-score-prediction-for-movies).  
+   *Kaggle*.
 
 ---
 <br>
