@@ -66,17 +66,17 @@ The architectural design of this prediction system is optimized for high-dimensi
 
 ```
 IMDB_Prediction/
-├── LICENSE                                # MIT License
-├── README.md                              # Project documentation
-├── .gitattributes                         # Git configuration
+├── LICENSE                                  # MIT License
+├── README.md                                # Project documentation
+├── .gitattributes                           # Git configuration
 │
-├── Code and Dataset/                      # Core Machine Learning Sub-Project
-│   ├── IMDB Movie Ratings Prediction.ipynb # Evolutionary development notebook
-│   └── movie_metadata.csv                 # High-integrity dataset (5000+ records)
+├── Code and Dataset/                        # Core Machine Learning Sub-Project
+│   ├── IMDB Movie Ratings Prediction.ipynb  # Evolutionary development notebook
+│   └── movie_metadata.csv                   # High-integrity dataset (5000+ records)
 │
-└── Documents/                             # Academic Reporting & Visualization
-    ├── IEEE_Report.pdf                    # Formal technical analysis (IEEE Format)
-    └── Poster.pdf                         # Visual data synthesis and results poster
+└── Documents/                               # Academic Reporting & Visualization
+    ├── IEEE_Report.pdf                      # Formal technical analysis (IEEE Format)
+    └── Poster.pdf                           # Visual data synthesis and results poster
 ```
 
 ---
