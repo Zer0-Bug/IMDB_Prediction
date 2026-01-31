@@ -44,6 +44,10 @@
     <img src="https://img.shields.io/badge/Specs-222222?style=flat" />
   </a>
   <span> ° </span>
+  <a href="#model-performance-results">
+    <img src="https://img.shields.io/badge/Results-222222?style=flat" />
+  </a>
+  <span> ° </span>
   <a href="#installation--usage">
     <img src="https://img.shields.io/badge/Deploy-222222?style=flat" />
   </a>
@@ -99,7 +103,7 @@ df['budget_log'] = np.log1p(df['budget'])
 ```
 
 ### 4. Model Training & Testing
-The dataset is split into training and testing sets (typically 80/20) to evaluate the model's ability to generalize to unseen movie data.
+The dataset is split into training and testing sets (typically 75/25 or 80/20) to evaluate the model's ability to generalize to unseen movie data.
 
 ### 5. Performance Monitoring
 During training, the system monitors Mean Squared Error (MSE) and R² Score. The XGBoost regressor is iteratively tuned to achieve the lowest possible error rates.
@@ -121,6 +125,41 @@ This section provides the formal academic context for the project.
 ---
 <br>
 <h2 align="center">Technical Specifications</h2>
+
+<table align="center">
+  <tr>
+    <th align="center">Component</th>
+    <th align="center">Details</th>
+  </tr>
+  <tr>
+    <td align="center">Programming Language</td>
+    <td align="center">Python 3.8+</td>
+  </tr>
+  <tr>
+    <td align="center">Primary Libraries</td>
+    <td align="center">Pandas, NumPy, Scikit-Learn, XGBoost, Matplotlib, Seaborn</td>
+  </tr>
+  <tr>
+    <td align="center">Dataset Volume</td>
+    <td align="center">5043 Records, 28 Columns</td>
+  </tr>
+  <tr>
+    <td align="center">Preprocessing Techniques</td>
+    <td align="center">Label Encoding, Log Transformation, Missing Value Imputation</td>
+  </tr>
+  <tr>
+    <td align="center">Algorithm Suite</td>
+    <td align="center">Linear, Lasso, Ridge Regression, KNN, Decision Tree, Random Forest, XGBoost</td>
+  </tr>
+  <tr>
+    <td align="center">Development Environment</td>
+    <td align="center">Jupyter Notebook / Anaconda</td>
+  </tr>
+</table>
+
+---
+<br>
+<h2 align="center">Model Performance Results</h2>
 
 <table align="center">
   <tr>
