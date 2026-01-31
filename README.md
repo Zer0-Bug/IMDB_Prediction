@@ -245,13 +245,14 @@ cd IMDB_Prediction
 
 ### Environment Configuration
 The project dependencies are managed via `pip`. It is highly recommended to utilize a isolated virtual environment to prevent dependency conflicts:
-
 ```bash
 # Optional: Create and activate virtual environment
 python -m venv venv
 source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+```
 
 # Install core dependencies
+```bash
 pip install numpy pandas scikit-learn xgboost matplotlib seaborn jupyterlab
 ```
 
@@ -259,8 +260,8 @@ pip install numpy pandas scikit-learn xgboost matplotlib seaborn jupyterlab
 The primary analytical engine is contained within the Jupyter Notebook. To reproduce the results:
 
 1. Launch JupyterLab:
-   ```bash
-   jupyter lab
+```bash
+jupyter lab
 ```
 2. Navigate to the `Code and Dataset/` folder via the sidebar.
 3. Open `IMDB Movie Ratings Prediction.ipynb`.
