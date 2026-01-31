@@ -301,13 +301,13 @@ All contributions are reviewed before being merged. Please ensure that your chan
 
 1. **Sharda, R., & Delen, D.** (2006). Predicting box-office success of motion pictures with neural networks. *Expert Systems with Applications*, 31(3), 481–490. https://doi.org/10.1016/j.eswa.2005.07.018
 
-2. **Choudhury, M., & Gaonkar, S.** (2018). Predicting movie success using machine learning. *Journal of Data Science*, 16(2), 95–110.
+2. **Choudhury, M., & Gaonkar, S.** (2018). Predicting movie success using machine learning. *Journal of Data Science*, 16(2), 95–110. https://link.springer.com/article/10.1007/s10796-016-9689-z
 
 3. **Breiman, L.** (2001). Random forests. *Machine Learning*, 45(1), 5–32. https://doi.org/10.1023/A:1010933404324
 
 4. **Goodfellow, I., Bengio, Y., & Courville, A.** (2016). *Deep learning*. MIT Press. https://www.deeplearningbook.org/
 
-5. **Chen, T., & Guestrin, C.** (2016). XGBoost: A scalable tree boosting system. In *Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining* (pp. 785–794). https://doi.org/10.1145/2939672.2939785 (arXiv: https://arxiv.org/abs/1603.02754)
+5. **Chen, T., & Guestrin, C.** (2016). XGBoost: A scalable tree boosting system. In *Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining* (pp. 785–794). https://doi.org/10.1145/2939672.2939785
 
 6. **Saurav, S.** (2023). IMDB score prediction for movies [Notebook]. Kaggle. https://www.kaggle.com/code/saurav9786/imdb-score-prediction-for-movies
 
