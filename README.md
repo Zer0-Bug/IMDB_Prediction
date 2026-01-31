@@ -248,9 +248,9 @@ pip install numpy pandas scikit-learn xgboost matplotlib seaborn
 <br>
 <h2 align="center">Future Improvements</h2>
 
-- 🔍 **Incorporating NLP Techniques**: Analyzing movie reviews to enhance prediction accuracy.
-- 📊 **Using Deep Learning**: Implementing neural networks to capture complex relationships in the data.
-- 📈 **Expanding Feature Set**: Adding social media metrics, box-office earnings, and critic scores.
+- **Incorporating NLP Techniques**: Analyzing movie reviews to enhance prediction accuracy.
+- **Using Deep Learning**: Implementing neural networks to capture complex relationships in the data.
+- **Expanding Feature Set**: Adding social media metrics, box-office earnings, and critic scores.
 
 ---
 <br>
