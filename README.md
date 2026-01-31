@@ -301,7 +301,7 @@ All contributions are reviewed before being merged. Please ensure that your chan
 
 1. **Sharda, R., & Delen, D.** (2006). Predicting box-office success of motion pictures with neural networks. *Expert Systems with Applications*, 31(3), 481–490. https://doi.org/10.1016/j.eswa.2005.07.018
 
-2. **Choudhury, M., & Gaonkar, S.** (2018). Predicting movie success using machine learning. *Journal of Data Science*, 16(2), 95–110. https://link.springer.com/article/10.1007/s10796-016-9689-z
+2. **Lee, K., Park, J., Kim, I., & Choi, Y.** (2018). Predicting movie success with machine learning techniques: ways to improve accuracy. *Information Systems Frontiers*, 20(3), 577–588. https://doi.org/10.1007/s10796-016-9689-z
 
 3. **Breiman, L.** (2001). Random forests. *Machine Learning*, 45(1), 5–32. https://doi.org/10.1023/A:1010933404324
 
