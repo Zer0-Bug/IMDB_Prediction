@@ -1,17 +1,17 @@
-<h1 align="center">IMDB Movie Rating Prediction</h1>
+<h1 align="center">IMDB Movie Ratings Prediction</h1>
 
 <p align="center">
   <a href="https://www.python.org/">
     <img src="https://img.shields.io/badge/python-3.8%2B-blue?style=for-the-badge&logo=python&logoColor=white" alt="Python">
   </a>
   <a href="https://scikit-learn.org/">
-    <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="Scikit-Learn">
+    <img src="https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="Scikit-Learn">
   </a>
-  <a href="https://xgboost.readthedocs.io/">
-    <img src="https://img.shields.io/badge/XGBoost-Regressor-green?style=for-the-badge" alt="XGBoost">
+  <a href="https://xgboost.ai/">
+    <img src="https://img.shields.io/badge/XGBoost-darkgreen?style=for-the-badge" alt="XGBoost">
   </a>
-  <a href="https://www.kaggle.com/">
-    <img src="https://img.shields.io/badge/Dataset-Kaggle-00AFF0?style=for-the-badge&logo=kaggle&logoColor=white" alt="Kaggle">
+  <a href="https://pandas.pydata.org/">
+    <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas">
   </a>
   <a href="LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-darkred?style=for-the-badge" alt="License">
@@ -19,8 +19,8 @@
 </p>
 
 <p align="center">
-  <b>An advanced regression pipeline for predicting movie ratings with high precision.</b><br><br>
-  <i>Utilizing gradient boosting architectures and comprehensive feature engineering on extensive cinematic metadata.</i>
+  <b>An end-to-end Machine Learning pipeline for predicting movie ratings with high precision.</b><br><br>
+  <i>Leveraging XGBoost, Random Forest, and advanced feature engineering to analyze cinematic success.</i>
 </p>
 <br>
 <p align="center">
@@ -44,7 +44,7 @@
     <img src="https://img.shields.io/badge/Specs-222222?style=flat" />
   </a>
   <span> ° </span>
-  <a href="#deployment--installation">
+  <a href="#installation--usage">
     <img src="https://img.shields.io/badge/Deploy-222222?style=flat" />
   </a>
 </p>
@@ -53,12 +53,12 @@
 <br>
 <h2 align="center">Technical Architecture</h2>
 
-The architectural design of this prediction system is optimized for high-dimensional cinematic data processing. The pipeline integrates several modular stages to ensure robust inference:
+The project is structured as a robust regression pipeline designed to predict IMDB scores based on historical cinematic data. The workflow follows a systematic approach to ensure data integrity and model generalization:
 
-1.  **Data Acquisition & Rectification:** Ingestion of raw tabular data followed by rigorous cleansing to handle sparsity in fields such as budget, gross, and cast Facebook likes.
-2.  **Multidimensional Feature Engineering:** Implementation of log transformations to normalize skewed financial distributions and label encoding for categorical cinematic attributes.
-3.  **Ensemble Inference Layer:** A competitive model evaluation framework comparing traditional Regressors (Linear, Ridge, Lasso) against advanced ensemble methods including Random Forest and XGBoost.
-4.  **Optimized Gradient Boosting:** Deployment of the XGBoost Regressor as the primary inference engine, leveraging second-order Taylor expansion for loss function optimization.
+1.  **Exploratory Data Analysis (EDA):** Statistical analysis of features such as genre, budget, and cast influence.
+2.  **Data Preprocessing:** Sophisticated handling of missing values and categorical encoding using log transformations for skewed distributions.
+3.  **Feature Engineering:** Extraction of meaningful insights from cast and crew data to enhance predictive power.
+4.  **Model Selection & Evaluation:** Comparative analysis of multiple regressors (Linear, KNN, Decision Trees, Random Forest, XGBoost) to optimize for RMSE and R² metrics.
 
 ---
 <br>
@@ -66,54 +66,57 @@ The architectural design of this prediction system is optimized for high-dimensi
 
 ```
 IMDB_Prediction/
-├── LICENSE                                  # MIT License
-├── README.md                                # Project documentation
-├── .gitattributes                           # Git configuration
+├── LICENSE                                   # MIT License
+├── README.md                                 # Project documentation
+├── .gitattributes                            # Git configuration for attributes
 │
-├── Code and Dataset/                        # Core Machine Learning Sub-Project
-│   ├── IMDB Movie Ratings Prediction.ipynb  # Evolutionary development notebook
-│   └── movie_metadata.csv                   # High-integrity dataset (5000+ records)
+├── Code and Dataset/                         # Core machine learning development
+│   ├── IMDB Movie Ratings Prediction.ipynb   # Comprehensive Jupyter Notebook (EDA + Modeling)
+│   └── movie_metadata.csv                    # Raw dataset containing 5000+ movie records
 │
-└── Documents/                               # Academic Reporting & Visualization
-    ├── IEEE_Report.pdf                      # Formal technical analysis (IEEE Format)
-    └── Poster.pdf                           # Visual data synthesis and results poster
+└── Documents/                                # Scientific and presentational materials
+    ├── IEEE_Report.pdf                       # Technical research paper in IEEE format
+    └── Poster.pdf                            # Visual summary and presentation poster
 ```
 
 ---
 <br>
 <h2 align="center">Processing Pipeline</h2>
 
-### 1. Data Integrity and Preprocessing
-The system addresses data quality issues by isolating and rectifying missing values. Statistical imputation and removal strategies are applied to ensure a high signal-to-noise ratio before feature scaling. This stage is critical for maintaining the mathematical validity of downstream regression models.
+### 1. Data Cleaning
+The system identifies and handles missing values within the `movie_metadata.csv`. Features with excessive null values are pruned, while others are imputed based on statistical medians or modes.
 
 ### 2. Feature Transformation
-Financial metrics such as 'budget' and 'gross' often exhibit massive variance and long-tailed distributions. The pipeline applies log-base transformations to project these features into a more manageable Euclidean space, effectively reducing the influence of extreme outliers and improving model convergence rates.
+To handle the high variance in movie budgets and gross earnings, log transformations are applied. This normalizes the distribution, allowing models like Linear Regression to perform more effectively.
 
-### 3. Model Benchmark Hierarchy
-The system evaluates a comprehensive spectrum of algorithmic approaches to establish a robust performance baseline:
--   **Linear Models:** Establishing fundamental parametric relationships via Linear and Ridge regression with L2 regularization.
--   **Non-Linear Models:** Exploring local dependencies and manifold structures through K-Nearest Neighbors (KNN) and Decision Trees.
--   **Ensemble Architectures:** Utilizing bagging methods (Random Forests) and boosting techniques (XGBoost) to concurrently minimize variance and bias.
+### 3. Categorical Encoding
+Categorical variables such as `genre` and `director_name` are transformed into numerical representations using encoding techniques, ensuring the models can ingest non-numeric cinematic data.
 
-### 4. Performance Optimization (XGBoost)
-The final pipeline stage focuses on the XGBoost (Extreme Gradient Boosting) regressor. By iteratively refining predictions through tree-based residual reduction and utilizing advanced regularization (L1/L2), the model achieves superior predictive accuracy on the unseen test set.
+```python
+# Conceptual transformation logic
+df['gross_log'] = np.log1p(df['gross'])
+df['budget_log'] = np.log1p(df['budget'])
+```
+
+### 4. Model Training & Testing
+The dataset is split into training and testing sets (typically 80/20) to evaluate the model's ability to generalize to unseen movie data.
+
+### 5. Performance Monitoring
+During training, the system monitors Mean Squared Error (MSE) and R² Score. The XGBoost regressor is iteratively tuned to achieve the lowest possible error rates.
 
 ---
 <br>
 <h2 align="center">Detailed Module Specifications</h2>
 
-### 1. Machine Learning Computational Core (Code and Dataset/)
-This module represents the primary engine of the project, facilitating the transition from raw unstructured metadata to refined predictive insights. It is structured as a standalone sub-project focused on experimental reproducibility.
+### 1. Code and Dataset (Core Implementation)
+This directory contains the primary intellectual property of the project.
+- **IMDB Movie Ratings Prediction.ipynb:** This notebook is the heart of the project. It includes the full data science lifecycle: from importing `pandas` and `numpy` to visualizing data distributions with `seaborn`. It implements five distinct machine learning algorithms, providing a comparative framework for cinematic success prediction.
+- **movie_metadata.csv:** A comprehensive dataset sourced from Kaggle, featuring 28 attributes for over 5000 movies. Key features include director names, lead actors, genres, and social media metrics (Facebook likes).
 
--   **Evolutionary Development Notebook:** The `IMDB Movie Ratings Prediction.ipynb` serves as a comprehensive documentation of the entire research lifecycle. It integrates Exploratory Data Analysis (EDA), feature correlation heatmaps, and systematic hyperparameter optimization. The use of vectorized operations via NumPy/Pandas ensures high-performance data manipulation.
--   **High-Fidelity Dataset:** The `movie_metadata.csv`, sourced from Kaggle, encompasses a multi-decade archive of cinematic data. It contains 28 distinct attributes for over 5000 films, including social media metrics, financial indicators, and technical production details.
--   **Validation Framework:** The system employs a rigorous 80/20 train-test split strategy combined with cross-validation to mitigate overfitting and ensure that the performance metrics reflect real-world generalizability.
-
-### 2. Scholarly Communication & Synthesis (Documents/)
-This sub-project is dedicated to the formalization and visual communication of the research findings, adhering to international academic and professional standards.
-
--   **IEEE Standard Reporting:** The `IEEE_Report.pdf` provides a granular technical disclosure of the project. It details the mathematical foundations of the regression algorithms, the justification for specific preprocessing choices, and a comparative analysis of result sets within an academic framework.
--   **Visual Presentation Layer:** The `Poster.pdf` acts as a condensed visual synthesis. It translates complex model comparisons and data distributions into an intuitive format for technical audiences, emphasizing the 97.86% accuracy threshold achieved through the XGBoost implementation.
+### 2. Documents (Scientific reporting)
+This section provides the formal academic context for the project.
+- **IEEE_Report.pdf:** A high-level technical document detailing the methodology, mathematical foundations of the algorithms used (e.g., the loss functions in XGBoost), and a deep dive into the results. It follows standard IEEE publication guidelines.
+- **Poster.pdf:** A condensed, visual representation of the project designed for academic conferences or project showcases. It highlights the key findings, such as the superiority of ensemble methods over linear models.
 
 ---
 <br>
@@ -121,73 +124,94 @@ This sub-project is dedicated to the formalization and visual communication of t
 
 <table align="center">
   <tr>
-    <th align="center">Metric</th>
-    <th align="center">XGBoost (Best Performer)</th>
-    <th align="center">Random Forest</th>
+    <th align="center">Model</th>
+    <th align="center">RMSE (Train)</th>
+    <th align="center">RMSE (Test)</th>
+    <th align="center">R² (Train)</th>
+    <th align="center">R² (Test)</th>
+    <th align="center">Accuracy</th>
   </tr>
   <tr>
-    <td align="center">RMSE (Test)</td>
-    <td align="center">0.033</td>
+    <td align="center">Linear Regression</td>
+    <td align="center">0.119</td>
+    <td align="center">0.120</td>
+    <td align="center">0.411</td>
+    <td align="center">0.387</td>
+    <td align="center">95.43%</td>
+  </tr>
+  <tr>
+    <td align="center">Decision Tree</td>
+    <td align="center">0.029</td>
+    <td align="center">0.049</td>
+    <td align="center">0.716</td>
+    <td align="center">0.148</td>
+    <td align="center">97.0%</td>
+  </tr>
+  <tr>
+    <td align="center">Random Forest</td>
+    <td align="center">0.014</td>
     <td align="center">0.035</td>
-  </tr>
-  <tr>
-    <td align="center">R2 Score (Test)</td>
-    <td align="center">0.611</td>
+    <td align="center">0.925</td>
     <td align="center">0.565</td>
-  </tr>
-  <tr>
-    <td align="center">Model Accuracy</td>
-    <td align="center">97.86%</td>
     <td align="center">97.74%</td>
   </tr>
-</table>
-
-<br>
-
-<table align="center">
   <tr>
-    <th align="center">Component</th>
-    <th align="center">Technology Stack</th>
+    <td align="center">KNN</td>
+    <td align="center">0.040</td>
+    <td align="center">0.049</td>
+    <td align="center">0.443</td>
+    <td align="center">0.159</td>
+    <td align="center">96.74%</td>
   </tr>
   <tr>
-    <td align="center">Language</td>
-    <td align="center">Python 3.8+</td>
+    <td align="center">Lasso Regression</td>
+    <td align="center">0.044</td>
+    <td align="center">0.043</td>
+    <td align="center">0.351</td>
+    <td align="center">0.346</td>
+    <td align="center">97.15%</td>
   </tr>
   <tr>
-    <td align="center">Core Libraries</td>
-    <td align="center">Pandas, NumPy, Scikit-Learn</td>
+    <td align="center">Ridge Regression</td>
+    <td align="center">0.044</td>
+    <td align="center">0.043</td>
+    <td align="center">0.351</td>
+    <td align="center">0.346</td>
+    <td align="center">97.15%</td>
   </tr>
   <tr>
-    <td align="center">Ensemble Framework</td>
-    <td align="center">XGBoost</td>
-  </tr>
-  <tr>
-    <td align="center">Visualization</td>
-    <td align="center">Matplotlib, Seaborn</td>
+    <td align="center"><b>XGBoost</b></td>
+    <td align="center"><b>0.004</b></td>
+    <td align="center"><b>0.033</b></td>
+    <td align="center"><b>0.991</b></td>
+    <td align="center"><b>0.611</b></td>
+    <td align="center"><b>97.86%</b></td>
   </tr>
 </table>
 
 ---
 <br>
-<h2 align="center">Deployment & Installation</h2>
-
-### Repository Acquisition
-To initialize a local copy of this project for analysis or further development:
-```bash
-git clone https://github.com/Zer0-Bug/IMDB_Prediction.git
-```
+<h2 align="center">Installation & Usage</h2>
 
 ### Environment Configuration
-The project dependencies are managed via standard Python package managers. It is recommended to utilize a virtual environment (venv or conda) to prevent dependency conflicts:
+The project dependencies are managed via `pip`. It is recommended to utilize a virtual environment:
+
 ```bash
 pip install numpy pandas scikit-learn xgboost matplotlib seaborn
 ```
 
-### Reproducing Results
-To execute the pipeline and verify the performance metrics:
-1. Navigate to the `Code and Dataset` subdirectory.
-2. Launch a Jupyter development environment (Notebook or Lab).
-3. Execute the computational cells in `IMDB Movie Ratings Prediction.ipynb` in sequential order to perform the full EDA and model training flow.
+### Running the Analysis
+1. Navigate to the `Code and Dataset/` directory.
+2. Launch Jupyter Notebook or JupyterLab.
+3. Open `IMDB Movie Ratings Prediction.ipynb` and execute the cells sequentially to reproduce the analysis and model evaluations.
+
+---
+<br>
+<h2 align="center">Future Improvements</h2>
+
+- 🔍 **Incorporating NLP Techniques**: Analyzing movie reviews to enhance prediction accuracy.
+- 📊 **Using Deep Learning**: Implementing neural networks to capture complex relationships in the data.
+- 📈 **Expanding Feature Set**: Adding social media metrics, box-office earnings, and critic scores.
 
 ---
 <br>
@@ -209,7 +233,16 @@ To contribute, please follow the steps below:
 All contributions are reviewed before being merged. Please ensure that your changes follow the existing code style and include relevant documentation or tests where applicable.
 
 ---
+<br>
+<h2 align="center">References</h2>
 
+1. **Sharda & Delen (2006)** - Predicting box-office success with neural networks.
+2. **Choudhury & Gaonkar (2018)** - Machine learning approaches to predicting movie success.
+3. **Breiman (2001)** - Random Forest: An ensemble learning technique.
+4. **Goodfellow et al. (2016)** - Deep Learning, MIT Press.
+5. **Chen & Guestrin (2016)** - XGBoost: A scalable tree boosting system.
+
+---
 <br>
 <p align="center">
   <a href="mailto:777eerol.exe@gmail.com">
